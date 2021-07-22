@@ -1,7 +1,7 @@
 import types from "../actions/filters"
 
 const initialState = {
-    sortBy: 'ratingsAsc'
+    sortBy: ''
 }
 
 const filtersReducer = (state=initialState, action) => {

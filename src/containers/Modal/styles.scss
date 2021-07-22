@@ -10,10 +10,6 @@
   z-index: 1;
 }
 
-.modal-display-flex {
-  display: flex;
-}
-
 .modal-display-hidden {
   display: none
 }
@@ -27,8 +23,6 @@
 }
 
 .modal-header {
-  display: flex;
-  justify-content: center;
   padding: $s-size
 }
 

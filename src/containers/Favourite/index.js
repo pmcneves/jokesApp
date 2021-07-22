@@ -27,7 +27,7 @@ const Favourite = ({favourite, index}) => {
 
     //remove favourite handler
     const removeFavourite = id => {
-        startRemoveFromFavourites(id)
+        dispatch(startRemoveFromFavourites(id))
     }
 
     return (

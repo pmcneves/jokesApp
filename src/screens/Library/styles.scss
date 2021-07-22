@@ -1,0 +1,6 @@
+.filters-bar {
+ flex-direction: row;
+ &-title {
+     margin-right: $m-size;
+ }
+}

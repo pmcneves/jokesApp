@@ -52,17 +52,15 @@ const jokesReducer = (state=initialState, action) => {
                 ]
             }
         case types.INITIATE_REMOVE_FAVOURITE:
-            console.log('called')
             return {
                 ...state,
                 loading: true
             }
         case types.REMOVE_FAVOURITE_SUCCESS:
-            console.log(state.favourites)
             return {
                 ...state,
                 loading: false,
-                // favourites: state.favourites.filter(favourite => favourite.)
+                favourites: state.favourites.filter( favourite  => favourite.joke.id !== action.id)
             }
         case types.REMOVE_FAVOURITE_ERROR:
             return {

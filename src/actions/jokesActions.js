@@ -79,6 +79,7 @@ export const startAddToFavourites = jokeToFavourites => {
 
 //remove from favourites
 
+
 const initiateRemoveFavourite = () => ({
     type: types.INITIATE_REMOVE_FAVOURITE
 })
@@ -88,7 +89,7 @@ const removeFavouriteSuccess = id => ({
     id
 })
 
-const removeFavouritesFailure = error => ({
+const removeFavouriteFailure = error => ({
     type: types.REMOVE_FAVOURITE_ERROR,
     error
 })
@@ -99,7 +100,7 @@ export const startRemoveFromFavourites = id => {
             dispatch(initiateRemoveFavourite())
             dispatch(removeFavouriteSuccess(id))
         } catch(err) {
-            dispatch(removeFavouritesFailure(err))
+            dispatch(removeFavouriteFailure(err))
         }
     }
 }

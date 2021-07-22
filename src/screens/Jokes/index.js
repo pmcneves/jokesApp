@@ -1,19 +1,17 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getRandomJoke } from "../../actions/jokesActions";
-import OpenModalButton from "../../components/Buttons/OpenModalButton";
-import GetJokeButton from "../../components/Buttons/GetJokeButton";
 import Joke from "../../components/Joke";
 import Modal from "../../containers/Modal";
 import { FaRegLaughBeam } from "react-icons/fa";
+import Button from "../../components/Buttons/Button";
 
 const Jokes = () => {
   const dispatch = useDispatch();
 
-  //loading data
+  //selectors
+  const isFavourite = useSelector(state=>state.jokes.joke.isFavourite)
   const getLoadingStatus = useSelector(state => state.jokes.loading)
-
-  //get joke and joke type
   const joke = useSelector(state=>state.jokes.joke.jokeData.data)
 
   //btn to fetch joke
@@ -43,10 +41,22 @@ const Jokes = () => {
         {joke && (
           <Joke joke={joke}/>
         )}
-        <div className="btns-container">
-          <GetJokeButton fetchJoke={fetchJoke} getLoadingStatus={getLoadingStatus}/>
+        <div className="flex justify-center">
+          <Button 
+            isDisabled={getLoadingStatus} 
+            classes={'btn'} 
+            fn={fetchJoke}
+          >
+            {getLoadingStatus ? 'Fetching new joke...' : ' Give me jokes!' }
+          </Button>
           {joke && (
-            <OpenModalButton openModal={openModal} />
+            <Button 
+              fn={openModal}
+              classes={'btn fav-btn'}
+              isDisabled={isFavourite}
+            >
+                {isFavourite ? 'Already a favourite :D' : 'I laughed :)'}
+            </Button>
           )}
         </div>
         <Modal 

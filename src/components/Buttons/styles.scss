@@ -12,14 +12,22 @@
     padding: $m-size;
     transition: background-color 0.3s linear;
     &:hover {
-        background-color: #2a3439;
+        background-color: $super-dark-blue;
     }
     &:disabled {
         opacity: 0.5
     }
 }
 
-.btns-modal {
-    display:flex;
-    justify-content: center;
+.close-btn {
+    background-color: $dark-red;
+    border: none;
+    border-radius: 5px;
+    color: $off-white;
+    font-size: $font-size-small;
+    padding: $m-size;
+    transition: background-color 0.3s linear;
+    &:hover {
+        background-color: $super-dark-red;
+    }
 }

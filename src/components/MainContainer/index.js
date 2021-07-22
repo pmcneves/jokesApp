@@ -1,6 +1,6 @@
 const Container = ({children}) => {
     return (
-        <div className="wrapper">
+        <div className="flex justify-center align-items-center wrapper">
             <div className="main-container">
                 {children}
             </div>
