@@ -1,0 +1,25 @@
+.btn-container {
+    text-align: center;
+    margin: $l-size $m-size 
+}
+
+.btn {
+    background-color: $dark-blue;
+    border: none;
+    border-radius: 5px;
+    color: $off-white;
+    font-size: $font-size-small;
+    padding: $m-size;
+    transition: background-color 0.3s linear;
+    &:hover {
+        background-color: #2a3439;
+    }
+    &:disabled {
+        opacity: 0.5
+    }
+}
+
+.btns-modal {
+    display:flex;
+    justify-content: center;
+}

@@ -1,0 +1,57 @@
+.modal {
+  background-color: rgba(0,0,0,0.6);
+  border: 0;
+  height: 100vh;
+  left: 0;
+  padding:0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.modal-display-flex {
+  display: flex;
+}
+
+.modal-display-hidden {
+  display: none
+}
+
+.modal-content {
+  background-color: $off-white;
+  border: $dark-blue solid 2px  ;
+  border-radius: 5px;
+  margin: auto;
+  width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  padding: $s-size
+}
+
+@media only screen and (min-width: 600px) {
+  .modal-content {
+      width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-content {
+      width: 40%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .modal-content {
+      width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modal-content {
+      width: 20%;
+  }
+}

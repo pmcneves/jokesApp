@@ -1,0 +1,32 @@
+//general styles
+body {
+    background: #efefef;
+    font-family: 'Roboto', sans-serif
+}
+
+button {
+    cursor: pointer;
+    &:disabled {
+        cursor: not-allowed
+    }
+}
+
+.section {
+    padding: $l-size;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display:flex
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center
+}

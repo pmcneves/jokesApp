@@ -1,0 +1,21 @@
+.header {
+    color: $off-white;
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark-blue;
+    padding: $l-size $xl-size;
+}
+
+.brand {
+    font-family: 'Kaushan Script';
+    font-size: $font-size-medium
+}
+
+@media only screen and (min-width: 600px) {
+    .brand {
+        font-size: $font-size-large
+    }
+}
+
+
+

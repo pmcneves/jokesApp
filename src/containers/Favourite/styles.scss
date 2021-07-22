@@ -1,0 +1,44 @@
+.favourite-container {
+    padding-left: $l-size;
+    padding-right: $l-size;
+    &:not(:last-child) {
+        border-bottom: black solid 1px 
+    }
+}
+
+.favourite-joke-counter {
+    display: none;
+    width: 10%;
+}
+
+.favourite-joke{
+    width: 95%;
+    padding-right: $m-size;
+}
+
+.favourite-removeBtn-container {
+    width: 5%;
+    justify-content: end;
+    color: grey;
+}
+
+.favourite-removeBtn {
+    &:hover {
+        color: red;
+        cursor: pointer
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .favourite-joke-counter {
+        display: block;
+        width: 10%;
+    }
+    .favourite-joke{
+        width: 86%;
+    }
+    .favourite-removeBtn-container {
+        width: 4%;
+    }
+}

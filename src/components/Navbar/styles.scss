@@ -1,0 +1,26 @@
+.navbar-items {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-item {
+    color: grey;
+    font-size: $font-size-small;
+    text-decoration: none;
+    &:not(:last-child) {
+        margin-right: $m-size
+    }
+    &:hover {
+        color: $off-white;
+    }
+    &--active {
+        color: $off-white;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-item {
+        font-size: $font-size-medium
+    }
+}

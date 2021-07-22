@@ -1,0 +1,18 @@
+@import './base/resets';
+@import './base/settings';
+@import './base/base';
+
+//Screens
+@import '../screens/Jokes/styles.scss';
+
+//Containers
+@import '../containers/Header/styles.scss';
+@import '../containers/Modal/styles.scss';
+@import '../containers/Favourite/styles.scss';
+
+//Components
+@import '../components/MainContainer/styles.scss';
+@import '../components/Navbar/styles.scss';
+@import '../components/Buttons/styles.scss';
+@import '../components/Joke/styles.scss';
+@import '../components/StarRating/styles.scss'
