@@ -4,7 +4,6 @@ const Container = ({children}) => {
             <div className="main-container">
                 {children}
             </div>
-            
         </div>
     )
 }
